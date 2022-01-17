@@ -12,3 +12,8 @@ function App() {
 }
 
 export default App;
+
+
+/* commands to run/install */
+// npm i react-typical
+//npm i rxjs

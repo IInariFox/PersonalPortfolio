@@ -122,19 +122,38 @@ const Resume = (props) => {
         </div>
         <div className="experience-description">
           <span className="resume-description-text">
-           
-          </span>
-          <br />
-          <span className="resume-description-text">
             - Integrated the web app with backend services to create new user
             onboarding application with dynamic form content.{" "}
           </span>
           <br />
+        </div>
+        <ResumeHeading
+          heading={"National STEM Honor Society"}
+          subHeading={"Data Analyst Intern"}
+          fromDate={"08/02/21"}
+          toDate={"10/10/21"}
+        />
+        <div className="experience-description">
           <span className="resume-description-text">
-            - I stretch my mental capacity to develope UI as per the given
-            designs.
+            Interned for NSTEM as data analyst - weekly assignments where we would use Google Analytics to illustrate and present our user and client data such as purchases, user traffic and online trends.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - We were required to become certified in Google's Advanced Analytics Certification program.{" "}
           </span>
           <br />
+        </div>
+        <ResumeHeading
+          heading={"Enterprise Hall"}
+          subHeading={"Data Analyst Intern"}
+          fromDate={"08/02/21"}
+          toDate={"09/05/21"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            Interned for Enterprise Hall, an online internship where we are given weekly coding assignments which require us to use MatLab and Python debug segments of code and make a visualization of the data using Excel as well as an analysis of what we did. 
+          </span>
         </div>
       </div>
     </div>,
@@ -175,16 +194,16 @@ const Resume = (props) => {
     /* Interests */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
-        heading="Teaching"
-        description="Apart from being a tech enthusiast and a code writer, i also love to teach people what i know simply because i believe in sharing."
-      />
-      <ResumeHeading
         heading="Music"
-        description="Listening to soothing music is something i can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that i can get my hands on."
+        description="I play alto saxophone and the piano. Whenever I have some spare time, and nobody is around for me to bother, I bring out an instrument and play some old tunes or improve my skills."
       />
       <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+        heading="Video Games"
+        description="Video games inspired me to get into computer science, and as cliche as that sounds, I have been playing for well over a decade now and will continue to do so. I try not to delve too much of my time into video games, but I love MMOs like Destiny 2 and story-based games like God of War."
+      />
+      <ResumeHeading
+        heading="Model Puzzles/Projects"
+        description="If I want to do something genuinely relaxing, I will buy a model set of a vehicle, building, or car. I piece each part (like legos, but much more complicated and precise) and recreate the model - kind of like a puzzle. "
       />
     </div>,
   ];

@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-native-typical" //potential change to "react-typical" need to test difference
+import Typical from "react-typical" //potential change to "react-typical" need to test difference
 import "./Profile.css";
 
 export default function Profile() {

@@ -1,6 +1,6 @@
 import React from "react";
-import Typical from "react-typical";
-import './Profile.css';
+import Typical from "react-native-typical" //potential change to "react-typical" need to test difference
+import "./Profile.css";
 
 export default function Profile() {
   return (
@@ -8,7 +8,7 @@ export default function Profile() {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
-            <div className="colz-icon">
+            <div className="cols-icon">
               <a href="https://github.com/IInariFox">
                 <i className="fa fa-github-square"></i>
               </a>
@@ -23,14 +23,13 @@ export default function Profile() {
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hi, I'm <span className="highlighted-text">Nathon</span>
+              HI, I'M <span className="highlighted-text">Nathon</span>
             </span>
           </div>
           <div className="profile-details-role">
             <span className="primary-text">
               {" "}
               <h1>
-                {" "}
                 <Typical
                   loop={Infinity}
                   steps={[
@@ -43,12 +42,13 @@ export default function Profile() {
                   ]}
                 />
               </h1>
-              <span className="profile-role-tagline">
-                An enthusiatic full stack developer ready to traverse the
-                everexpanding world of big tech.
-              </span>
+            </span>
+            <span className="profile-role-tagline">
+              An enthusiatic full stack developer ready to traverse the
+              everexpanding world of big tech.
             </span>
           </div>
+
           <div className="profile-options">
             <button className="btn primary-btn"> Hire Me </button>
             <a href="myResumeJan.pdf" download="Nathons Resume">

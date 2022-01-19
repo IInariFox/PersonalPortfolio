@@ -1,5 +1,6 @@
 import React from "react";
 import Typical from "react-typical" //potential change to "react-typical" need to test difference
+import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.css";
 
 export default function Profile() {
@@ -50,7 +51,7 @@ export default function Profile() {
           </div>
 
           <div className="profile-options">
-            <button className="btn primary-btn"> Hire Me </button>
+            <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}> Hire Me </button>
             <a href="myResumeJan.pdf" download="Nathons Resume">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>

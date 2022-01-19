@@ -256,8 +256,8 @@ const Resume = (props) => {
     };
   }, [fadeInSubscription]);
 
-  return (
-    <div className="resume-container screen-container " id={props.id || ""}>
+  return ( //added fade-in class to line 260
+    <div className="resume-container screen-container fade-in" id={props.id || ""}>
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">

@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import Typical from "react-typical";
-import axios from "axios";
-import { toast } from "react-toastify";
-
+import React, { useEffect, useState } from "react";
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
+import axios from "axios";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import { toast } from "react-toastify";
+import "./ContactMe.css";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
-import "./ContactMe.css";
+import Footer from "../Footer/Footer";
+import Typical from "react-typical";
 
-export default function ContactMe(props) {
+const ContactMe = (props) => {
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return; //changed from fadeScreen to fadeInScreen
+    if (screen.fadeInScreen !== props.id) return;
+
     Animations.animations.fadeInScreen(props.id);
   };
-
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
@@ -25,26 +25,38 @@ export default function ContactMe(props) {
   const [banner, setBanner] = useState("");
   const [bool, setBool] = useState(false);
 
+  useEffect(() => {
+    return () => {
+      fadeInSubscription.unsubscribe();
+    };
+  }, [fadeInSubscription]);
+
   const handleName = (e) => {
     setName(e.target.value);
   };
+
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
+
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
-  console.log(name);
-  const submitForm = async (e) => {
+
+  const formSubmit = async (e) => {
     e.preventDefault();
+
     try {
       let data = {
         name,
         email,
         message,
       };
+
       setBool(true);
+
       const res = await axios.post(`/contact`, data);
+
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -58,19 +70,23 @@ export default function ContactMe(props) {
         setEmail("");
         setMessage("");
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   };
 
   return (
-    <div className="main-container fade-in" id={props.id || ""}>
-      <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
+    <div className="main-container" id={props.id || ""}>
+      <ScreenHeading
+        subHeading={"Let's Keep In Touch"}
+        title={props.screenName ? props.screenName : ""}
+      />
       <div className="central-form">
         <div className="col">
           <h2 className="title">
-            <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
-          </h2>{" "}
+            {" "}
+            <Typical loop={Infinity} steps={["Get in Touch 🤝", 1000]} />
+          </h2>
           <a href="https://github.com/IInariFox">
             <i className="fa fa-github-square"></i>
           </a>
@@ -78,12 +94,13 @@ export default function ContactMe(props) {
             <i className="fa fa-linkedin-square"></i>
           </a>
         </div>
+
         <div className="back-form">
           <div className="img-back">
-            <h4>Send Your Email Here!</h4>
-            <img src={imgBack} alt="file not found" />
+            <h4>Send your message</h4>
+            <img src={imgBack} alt="" />
           </div>
-          <form onSubmit={submitForm}>
+          <form onSubmit={formSubmit}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
             <input type="text" onChange={handleName} value={name} />
@@ -92,15 +109,19 @@ export default function ContactMe(props) {
             <input type="email" onChange={handleEmail} value={email} />
 
             <label htmlFor="message">Message</label>
-            <textarea type="text" onChange={handleMessage} value={message} />
+            <textarea
+              type="text"
+              onChange={handleMessage}
+              value={message}
+              name="message"
+            />
 
             <div className="send-btn">
               <button type="submit">
-                send
-                <i className="fa fa-paper-plane" />
+                Send <i className="fa fa-paper-plane"></i>
                 {bool ? (
                   <b className="load">
-                    <img src={load1} alt="file not responding" />
+                    <img src={load1} alt="load1" />
                   </b>
                 ) : (
                   ""
@@ -110,6 +131,9 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
-}
+};
+
+export default ContactMe;

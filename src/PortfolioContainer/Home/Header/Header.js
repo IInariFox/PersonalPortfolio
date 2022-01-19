@@ -1,3 +1,4 @@
+//will change line 77 to logo instead of name
 import React, { useState, useEffect } from "react";
 import {
   TOTAL_SCREENS,
@@ -8,7 +9,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
-export default function Header() {
+const Header = () => {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
@@ -17,7 +18,10 @@ export default function Header() {
 
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
+
+    setSelectedScreen(screenIndex);
   };
+
   let currentScreenSubscription =
     ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
 
@@ -67,10 +71,10 @@ export default function Header() {
           className="header-hamburger"
           onClick={() => setShowHeaderOptions(!showHeaderOptions)}
         >
-          <FontAwesomeIcon className="header-hmburger-bars" icon={faBars} />
+          <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
-          <span>Nathon</span> 
+          <span>Nathon.</span>
         </div>
         <div
           className={
@@ -84,5 +88,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
-//will change line 73 to logo instead of name
+};
+
+export default Header;

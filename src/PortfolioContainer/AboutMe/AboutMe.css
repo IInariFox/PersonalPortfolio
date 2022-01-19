@@ -18,7 +18,7 @@
 }
 
 .about-me-profile {
-  width: 40%;
+  width: 50%;
   background-image: url("../../assets/AboutMe/me.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,13 +26,12 @@
 }
 
 .about-me-details {
-  width: 80%;
+  width: 48%;
   text-align: justify;
   padding: 30px;
 }
 
 .about-me-description {
-
   font-size: 12px;
 }
 
@@ -40,7 +39,8 @@
   margin: 80px 0;
 }
 
-.highlght-heading {
+.highlight-heading {
+  color: #fff;
   font-family: "Poppins Bold";
   font-size: 14px;
   margin: 0 0 5px 0;
@@ -57,8 +57,8 @@
   height: 12px;
   width: 12px;
   margin: 0 10px 0 0;
-  background-color: #ff5823;
   border-radius: 50%;
+  background-color: #ff5823;
 }
 
 .about-me-options .highlighted-btn {

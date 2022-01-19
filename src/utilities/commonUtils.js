@@ -1,10 +1,10 @@
-import Home from '../portfolio-container/Home/Home';
-import AboutMe from '../portfolio-container/AboutMe/AboutMe';
-import Resume from '../portfolio-container/Resume/Resume';
-import ContactMe from '../portfolio-container/ContactMe/ContactMe';
+import Home from '../PortfolioContainer/Home/Home';
+import AboutMe from '../PortfolioContainer/AboutMe/AboutMe';
+import Resume from '../PortfolioContainer/Resume/Resume';
+import ContactMe from '../PortfolioContainer/ContactMe/ContactMe';
 import React, { useRef, useEffect } from 'react';
 import LoadingBar from 'react-top-loading-bar'
-import loaderService from '../services/loader-service/loader-service';
+import loaderService from '../services/loader-service'; //changed from ../../services/loader-service
 import './commonUtils.css'
 
 
@@ -21,7 +21,6 @@ export const TOTAL_SCREENS = [
   { screen_name: "Contact Me", component: ContactMe }
 ];
 
-/* GET SCREEN INDEX */
 export const GET_SCREEN_INDEX = (screen_name) => {
   if (!screen_name)
     return -1;

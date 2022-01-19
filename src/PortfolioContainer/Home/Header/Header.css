@@ -1,14 +1,14 @@
 .header-container {
   display: flex;
   justify-content: center;
-  height: 149px;
+  height: 140px;
   color: var(--white);
 }
 
 .header-parent {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
   width: 70%;
   color: var(--white);
@@ -42,11 +42,11 @@
 }
 
 .selected-header-option {
-  color: var(--dark-orange);
+  color: #ff5823;
 }
 
 @media only screen and (max-width: 1110px) {
-  header-parent {
+  .header-parent {
     width: 80%;
   }
 }
@@ -82,6 +82,10 @@
   }
 
   .selected-header-option {
+    color: var(--white);
+  }
+
+  .header-option {
     color: var(--white);
   }
 

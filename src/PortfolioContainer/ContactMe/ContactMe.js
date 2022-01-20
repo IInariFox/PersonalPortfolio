@@ -10,18 +10,6 @@ import Animations from "../../utilities/Animations";
 import Footer from "../Footer/Footer";
 import Typical from "react-typical";
 
-var Airtable = require("airtable");
-var base = new Airtable({ apiKey: "keyWgErWRAg6Xfu4N" }).base("appigBflkf3ndM9lv.");
-
-base("AirtableDataSheet").create([
-  {
-    fields: {
-      name: "insert name",
-      email: "nameExample@ref.com",
-      message: "Enter a message",
-    },
-  },
-]);
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {

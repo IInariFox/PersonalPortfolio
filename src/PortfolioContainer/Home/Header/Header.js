@@ -70,8 +70,11 @@ export default function Header() {
         >
           <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
-        <div className="header-logo">
-          <span>EDUBABA</span>
+        <div className="header-logo logo">
+          <img
+          src={require(`../../../assets/Home/logo.png`).default}
+          alt="Bad file"
+        />
         </div>
         <div
           className={

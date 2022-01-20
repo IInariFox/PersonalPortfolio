@@ -3,13 +3,12 @@ import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.css";
 import Typical from "react-typical";
 
-const Profile = () => {
+export default function Profile() {
   return (
     <div className="profile-container">
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
-          
             <div className="colz-icon">
               <a href="https://github.com/IInariFox">
                 <i className="fa fa-github-square"></i>
@@ -31,10 +30,7 @@ const Profile = () => {
           <div className="profile-details-role">
             <span className="primary-text">
               {" "}
-              <h1
-               
-              >
-                {" "}
+              <h1>
                 <Typical
                   loop={Infinity}
                   steps={[
@@ -53,14 +49,11 @@ const Profile = () => {
               everexpanding world of big tech.
             </span>
           </div>
+
           <div className="profile-options">
-            <button
-              className="btn primary-btn"
-              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-            >
-              {" "}
-              Hire Me{" "}
-            </button>
+            <button className="btn primary-btn"
+            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            > Hire Me </button>
             <a href="myResumeJan.pdf" download="Nathons Resume">
               <button className="btn highlighted-btn"> Get Resume </button>
             </a>
@@ -72,5 +65,6 @@ const Profile = () => {
       </div>
     </div>
   );
-};
-export default Profile;
+}
+
+//export default Profile;

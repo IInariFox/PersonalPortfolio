@@ -10,12 +10,25 @@ import Animations from "../../utilities/Animations";
 import Footer from "../Footer/Footer";
 import Typical from "react-typical";
 
-const ContactMe = (props) => {
+var Airtable = require("airtable");
+var base = new Airtable({ apiKey: "keyWgErWRAg6Xfu4N" }).base("appigBflkf3ndM9lv.");
+
+base("AirtableDataSheet").create([
+  {
+    fields: {
+      name: "insert name",
+      email: "nameExample@ref.com",
+      message: "Enter a message",
+    },
+  },
+]);
+
+export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
-
     Animations.animations.fadeInScreen(props.id);
   };
+
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
@@ -25,38 +38,26 @@ const ContactMe = (props) => {
   const [banner, setBanner] = useState("");
   const [bool, setBool] = useState(false);
 
-  useEffect(() => {
-    return () => {
-      fadeInSubscription.unsubscribe();
-    };
-  }, [fadeInSubscription]);
-
   const handleName = (e) => {
     setName(e.target.value);
   };
-
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
-
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
-
-  const formSubmit = async (e) => {
+  console.log(name);
+  const submitForm = async (e) => {
     e.preventDefault();
-
     try {
       let data = {
         name,
         email,
         message,
       };
-
       setBool(true);
-
       const res = await axios.post(`/contact`, data);
-
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -70,23 +71,19 @@ const ContactMe = (props) => {
         setEmail("");
         setMessage("");
       }
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log(error);
     }
   };
 
   return (
-    <div className="main-container" id={props.id || ""}>
-      <ScreenHeading
-        subHeading={"Let's Keep In Touch"}
-        title={props.screenName ? props.screenName : ""}
-      />
+    <div className="main-container fade-in" id={props.id || ""}>
+      <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
       <div className="central-form">
         <div className="col">
           <h2 className="title">
-            {" "}
-            <Typical loop={Infinity} steps={["Get in Touch 🤝", 1000]} />
-          </h2>
+            <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
+          </h2>{" "}
           <a href="https://github.com/IInariFox">
             <i className="fa fa-github-square"></i>
           </a>
@@ -94,13 +91,12 @@ const ContactMe = (props) => {
             <i className="fa fa-linkedin-square"></i>
           </a>
         </div>
-
         <div className="back-form">
           <div className="img-back">
-            <h4>Send your message</h4>
-            <img src={imgBack} alt="" />
+            <h4>Send Your Email Here!</h4>
+            <img src={imgBack} alt="file not found" />
           </div>
-          <form onSubmit={formSubmit}>
+          <form onSubmit={submitForm}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
             <input type="text" onChange={handleName} value={name} />
@@ -109,19 +105,15 @@ const ContactMe = (props) => {
             <input type="email" onChange={handleEmail} value={email} />
 
             <label htmlFor="message">Message</label>
-            <textarea
-              type="text"
-              onChange={handleMessage}
-              value={message}
-              name="message"
-            />
+            <textarea type="text" onChange={handleMessage} value={message} />
 
             <div className="send-btn">
               <button type="submit">
-                Send <i className="fa fa-paper-plane"></i>
+                send
+                <i className="fa fa-paper-plane" />
                 {bool ? (
                   <b className="load">
-                    <img src={load1} alt="load1" />
+                    <img src={load1} alt="file not responding" />
                   </b>
                 ) : (
                   ""
@@ -134,6 +126,6 @@ const ContactMe = (props) => {
       <Footer />
     </div>
   );
-};
+}
 
-export default ContactMe;
+//export default ContactMe;

@@ -51,7 +51,6 @@ const Resume = (props) => {
     { label: "Interests", logoSrc: "interests.svg" },
   ];
 
-
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 35 },
     { skill: "HTML", ratingPercentage: 40 },
@@ -78,8 +77,7 @@ const Resume = (props) => {
       duration: { fromDate: "2022", toDate: "2022" },
       description:
         "A reservation website for showcasing and selling hotel rooms and bed and breakfast homes onlne with payment system integration using Stripe",
-      subHeading:
-        "Technologies Used: Ruby On Rails, JSX, Bootstrap and Stripe",
+      subHeading: "Technologies Used: Ruby On Rails, JSX, Bootstrap and Stripe",
     },
   ];
 
@@ -87,14 +85,18 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="education">
       <ResumeHeading
         heading={"Southern New Hampshire University"}
-        subHeading={"Took a gap year during sophomore year - awaiting transfer status"}
+        subHeading={
+          "Took a gap year during sophomore year - awaiting transfer status"
+        }
         fromDate={"2019"}
         toDate={"2021"}
       />
 
       <ResumeHeading
         heading={"Altcademy"}
-        subHeading={"An online bootcamp focusing on full stack web and mobile development"}
+        subHeading={
+          "An online bootcamp focusing on full stack web and mobile development"
+        }
         fromDate={"2021"}
         toDate={"2022"}
       />
@@ -117,7 +119,8 @@ const Resume = (props) => {
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Interned for NSTEM as a web and mobile developer - fixing bugs and creating new websites.
+            Interned for NSTEM as a web and mobile developer - fixing bugs and
+            creating new websites.
           </span>
         </div>
         <div className="experience-description">
@@ -135,12 +138,15 @@ const Resume = (props) => {
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Interned for NSTEM as data analyst - weekly assignments where we would use Google Analytics to illustrate and present our user and client data such as purchases, user traffic and online trends.
+            Interned for NSTEM as data analyst - weekly assignments where we
+            would use Google Analytics to illustrate and present our user and
+            client data such as purchases, user traffic and online trends.
           </span>
         </div>
         <div className="experience-description">
           <span className="resume-description-text">
-            - We were required to become certified in Google's Advanced Analytics Certification program.{" "}
+            - We were required to become certified in Google's Advanced
+            Analytics Certification program.{" "}
           </span>
           <br />
         </div>
@@ -152,7 +158,10 @@ const Resume = (props) => {
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Interned for Enterprise Hall, an online internship where we are given weekly coding assignments which require us to use MatLab and Python debug segments of code and make a visualization of the data using Excel as well as an analysis of what we did. 
+            Interned for Enterprise Hall, an online internship where we are
+            given weekly coding assignments which require us to use MatLab and
+            Python debug segments of code and make a visualization of the data
+            using Excel as well as an analysis of what we did.
           </span>
         </div>
       </div>
@@ -231,7 +240,7 @@ const Resume = (props) => {
         <img
           className="bullet-logo"
           src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-          alt="Could not load file"
+          alt="Bad file"
         />
         <span className="bullet-label">{bullet.label}</span>
       </div>
@@ -256,8 +265,11 @@ const Resume = (props) => {
     };
   }, [fadeInSubscription]);
 
-  return ( //added fade-in class to line 260
-    <div className="resume-container screen-container fade-in" id={props.id || ""}>
+  return (
+    <div
+      className="resume-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">

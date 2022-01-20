@@ -1,18 +1,11 @@
 .profile-container {
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   height: 10%;
   min-height: fit-content;
   background-image: url("../../../assets/Home/bg.jpg");
-}
-
-@media only screen and (max-width: 414px) {
-  .profile-container {
-    background-image: url("../../../assets/Home/bg.jpg");
-    width: 100%;
-    height: 10%;
-  }
 }
 
 .profile-parent {
@@ -37,15 +30,8 @@
   font-family: "cursive";
 }
 
-@media only screen and (max-width: 414px) {
-  .profile-details-role h1 {
-    font-size: 25px;
-    font-family: "cursive";
-  }
-}
-
 .primary-text {
-  color: var(--white);
+  color: (--white);
 }
 
 .highlighted-text {
@@ -55,14 +41,7 @@
 .profile-role-tagline {
   font-size: 19px;
   margin: 5px 0 0 0;
-  font-family: Poppins Light;
-}
-
-@media only screen and (max-width: 414px) {
-  .profile-role-tagline {
-    visibility: hidden;
-    font-size: 19px;
-  }
+  font-family: "Poppins Light";
 }
 
 .profile-options .highlighted-btn {
@@ -84,7 +63,6 @@
   border-radius: 50%;
   height: 380px;
   width: 380px;
-
   margin: 0 0px 0 100px;
 }
 
@@ -103,7 +81,16 @@
   transition: 1s ease-out;
 }
 
-/* IPAD PRO RESPONSIVENESS */
+.colz .colz-icon i {
+  color: white;
+  padding: 8px;
+  padding-left: 0px;
+}
+
+.colz .cols-icon i:hover {
+  transform: scale(1.5);
+}
+
 @media only screen and (max-width: 1110px) {
   .profile-picture {
     margin: 0 0px 0 80px;
@@ -114,11 +101,7 @@
   }
 
   .profile-details-role .primary-text {
-    font-size: 34px;
-  }
-
-  .profile-role-tagline {
-    font-size: 12px;
+    font: 12px;
   }
 
   .profile-options .btn {
@@ -128,16 +111,14 @@
   }
 }
 
-/* MOBILE RESPONSIVENESS */
 @media only screen and (max-width: 910px) {
   .profile-picture {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 4px;
     height: 320px;
     width: 320px;
   }
 }
 
-/* MOBILE RESPONSIVENESS */
 @media only screen and (max-width: 810px) {
   .profile-picture {
     margin: 0 !important;
@@ -153,8 +134,8 @@
     justify-content: space-between;
   }
 
-  .profile-details {
-    margin: 25px 0 0 0;
+  .proflie-details {
+    margin: 25px 0 0;
   }
 
   .profile-options .highlighted-btn {
@@ -167,7 +148,6 @@
   }
 }
 
-/* MOBILE RESPONSIVENESS */
 @media only screen and (max-width: 375px) {
   .profile-picture {
     height: 275px;
@@ -175,42 +155,7 @@
     margin-top: -90px;
   }
 
-  .profile-details {
+  .proflie-details {
     width: 95%;
   }
-}
-
-.colz {
-  color: red;
-}
-
-.colz .colz-icon i {
-  color: white;
-  padding: 8px;
-  padding-left: 0px;
-}
-
-.colz .colz-icon i:hover {
-  transform: scale(1.5);
-}
-
-@media only screen and (max-width: 800px) {
-  .colz .colz-icon i {
-    background-color: lightblue;
-    padding: 0px;
-    display: none;
-  }
-}
-
-/*@media only screen and (max-width: 800px) {
-  .profile-role-tagline {}
-}*/
-
-.profile-role-tagline {
-  /* font-family: "Poppins Thin";
-  font-family: "Poppins Light"; */
-  /* font-family: "Poppins Regular"; */
-  font-family: "Poppins Medium";
-  opacity: 0.9;
-  padding: 0px;
 }

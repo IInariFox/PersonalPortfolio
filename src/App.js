@@ -1,17 +1,46 @@
-import "./App.css";
-import PortfolioContainer from "./PortfolioContainer/PortfolioContainer";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React from "react";
+import { Navbarjsx } from "./Components/Navbar/Navbar";
+import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Home } from "./Components/Home/Home";
+import { Preloader } from "./Components/Pre";
+import { About } from "./Components/About/About";
+import { Home2 } from "./Components/Home/Home2";
+import { Projects } from "./Components/Projects/Projects";
+import { Contact } from "./Components/Contact/Contact";
+import { Footer } from "./Components/Footer/Footer";
 
-function App() {
+export default function App() {
+  const [load, setload] = React.useState(false);
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setload(false);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <ToastContainer />
-      <PortfolioContainer />
-    </div>
+    <>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbarjsx />
+        <section id="#home">
+          <Home />
+          <Home2 />
+        </section>
+        <section id="#about">
+          <About />
+        </section>
+        <section id="#projects">
+          <Projects />
+        </section>
+        <section id="#contact">
+          <Contact />
+        </section>
+        <section id="#resume">
+          <Footer />
+        </section>
+      </div>
+    </>
   );
 }
-
-export default App;
-
-//export default App;

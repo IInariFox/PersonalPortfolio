@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#project.jsx
+#import Covidlogo from "../Assets/21.png";
+#import Travelocitylogo from "../Assets/22.png";
+#import Airgaragelogo from "../Assets/23.png";

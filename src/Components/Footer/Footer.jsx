@@ -1,9 +1,7 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import "./Footer.css";
-import {
-  AiFillGithub
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { GrResume } from "react-icons/gr";
 export const Footer = () => {
@@ -32,6 +30,17 @@ export const Footer = () => {
             className="icon-colour home-social-icons"
           >
             <FaLinkedinIn />
+          </a>
+        </li>
+        <li className="social-icons">
+          <a
+            href="https://drive.google.com/file/d/18dH62pb2jUWYHAyU6a2JnBWfqQZPUZlN/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="icon-colour home-social-icons"
+            id="resumelink"
+          >
+            <GrResume />
           </a>
         </li>
       </ul>

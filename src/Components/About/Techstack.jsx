@@ -7,10 +7,16 @@ import {
   DiNodejs,
   DiGit,
   DiHtml5,
-  DiCss3
+  DiCss3,
+  DiPython,
+  DiRuby,
+  DiLinux,
+  DiStackoverflow,
+  DiJava,
+  DiBootstrap
 } from "react-icons/di";
 
-import { SiRedux, SiMaterialUi } from "react-icons/si";
+import { SiMaterialUi } from "react-icons/si";
 export const TechStack = () => {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
@@ -33,10 +39,25 @@ export const TechStack = () => {
         <DiCss3 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiRedux />
+        <SiMaterialUi />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiMaterialUi />
+        <DiPython />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiRuby />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiLinux />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiStackoverflow />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiJava />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiBootstrap />
       </Col>
     </Row>
   );

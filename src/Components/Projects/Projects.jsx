@@ -4,8 +4,8 @@ import { Particle } from "../Home/Particle";
 import "./Projects.css";
 import Clockifylogo from '../Assets/Clockify.png';
 import sudokologo from "../Assets/S.png";
-import { DiReact, DiJavascript, DiGithubBadge, DiHtml5 } from "react-icons/di";
-import { SiStyledComponents, SiMaterialUi, SiClockify } from "react-icons/si";
+import { DiReact, DiJavascript, DiGithubBadge, DiHtml5, DiPython } from "react-icons/di";
+import { SiStyledComponents, SiMaterialUi } from "react-icons/si"; //removed SiClockify
 import { FaLink, FaCss3 } from "react-icons/fa";
 export const Projects = () => {
   return (
@@ -68,8 +68,8 @@ export const Projects = () => {
                 <Card.Title style={{ fontWeight: "800" }}>
                   Project Supremacy
                 </Card.Title>
-                <Card.Text style={{ textAlign: "justify" }}>
-                  define_text
+                <Card.Text style={{ textAlign: "center" }}>
+                  A work in progress...
                 </Card.Text>
                 <div className="Techstacks">
                   <DiReact className="Techstacks-icons" />
@@ -78,16 +78,8 @@ export const Projects = () => {
                   <SiMaterialUi className="Techstacks-icons" />
                   <FaCss3 className="Techstacks-icons" />
                   <DiHtml5 className="Techstacks-icons" />
+                  <DiPython className="Techstacks-icons" />
                 </div>
-                <Button
-                  variant="primary"
-                  style={{ marginLeft: "1%", marginTop: "5%" }}
-                  href="link_for_app_website"
-                  target="_blank"
-                >
-                  {" "}
-                  <FaLink /> Link
-                </Button>
               </Card.Body>
             </Card>
           </Col>

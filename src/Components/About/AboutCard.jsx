@@ -8,7 +8,7 @@ export const AboutCard = () => {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            I am<span className="purple"> San Diego, California.</span>
+            I am from<span className="purple"> San Diego, California.</span>
             <br />I am a junior in college that is waiting to transfer to my dream school!
             <br />
             <br />

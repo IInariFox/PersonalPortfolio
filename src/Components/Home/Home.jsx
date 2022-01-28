@@ -11,11 +11,11 @@ export const Home = () => {
             <Row>
               <Col md={7} className="home-header">
                 <h1 style={{ paddingBottom: 15 }} className="heading">
-                  Howdy <span className="wave">👋🏻</span>
+                Howdy<span className="wave">👋🏻</span>
                 </h1>
                 <h1 className="heading-name">
                   I'm
-                  <strong className="main-name"> &nbsp;Nathon Chavez</strong>
+                  <strong className="main-name">&nbsp; Nathon Chavez</strong>
                 </h1>
                 <div style={{ padding: 50, textAlign: "left" }}>
                   <Type />

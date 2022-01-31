@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contact.css";
-import { FaHeadphonesAlt } from "react-icons/fa";
+import { TiMessages } from "react-icons/ti";
 import laptoplogo from "../Assets/laptop.png";
 import emailjs from "emailjs-com";
 
@@ -46,7 +46,7 @@ export const Contact = () => {
   return (
     <div className="contact-form">
       <h1>
-        <FaHeadphonesAlt className="contactlogo" /> &nbsp;Get in{" "}
+        <TiMessages className="contactlogo" /> &nbsp;Get in{" "}
         <strong className="purple">Touch</strong>
       </h1>
       <div className="FormDiv">

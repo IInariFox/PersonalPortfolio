@@ -15,6 +15,7 @@ import {
   DiJava,
   DiBootstrap
 } from "react-icons/di";
+import { FaCcStripe } from "react-icons/fa";
 
 import { SiMaterialUi } from "react-icons/si";
 export const TechStack = () => {
@@ -58,6 +59,9 @@ export const TechStack = () => {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiBootstrap />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <FaCcStripe />
       </Col>
     </Row>
   );

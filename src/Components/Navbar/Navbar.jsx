@@ -26,7 +26,7 @@ export const Navbarjsx = () => {
       setnavColour(false);
     }
   }
-//changed logo from line 52 to 49
+  //changed logo from line 52 to 49
   React.useEffect(() => {
     if (pathstate === "#resume") {
       const element = document.getElementById("resumelink");
@@ -64,7 +64,10 @@ export const Navbarjsx = () => {
               <Nav.Link
                 as={Link}
                 to="/"
-                onClick={(() => setexpand(false), () => setpathstate("#home"))}
+                onClick={() => {
+                  setexpand(false);
+                  setpathstate("#home");
+                }}
               >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
@@ -73,7 +76,10 @@ export const Navbarjsx = () => {
               <Nav.Link
                 as={Link}
                 to="/about"
-                onClick={(() => setexpand(false), () => setpathstate("#about"))}
+                onClick={() => {
+                  setexpand(false);
+                  setpathstate("#about");
+                }}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
@@ -82,9 +88,10 @@ export const Navbarjsx = () => {
               <Nav.Link
                 as={Link}
                 to="/projects"
-                onClick={
-                  (() => setexpand(false), () => setpathstate("#projects"))
-                }
+                onClick={() => {
+                  setexpand(false);
+                  setpathstate("#projects");
+                }}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -96,9 +103,10 @@ export const Navbarjsx = () => {
               <Nav.Link
                 as={Link}
                 to="/contact"
-                onClick={
-                  (() => setexpand(false), () => setpathstate("#contact"))
-                }
+                onClick={() => {
+                  setexpand(false);
+                  setpathstate("#contact");
+                }}
               >
                 <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
@@ -107,9 +115,10 @@ export const Navbarjsx = () => {
               <Nav.Link
                 as={Link}
                 to="/resume"
-                onClick={
-                  (() => setexpand(false), () => setpathstate("#resume"))
-                }
+                onClick={() => {
+                  setexpand(false);
+                  setpathstate("#resume");
+                }}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>

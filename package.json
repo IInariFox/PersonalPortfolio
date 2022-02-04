@@ -1,7 +1,6 @@
 {
-  "homepage": "https://github.com/IInariFox/PersonalPortfolio/tree/master",
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "personal-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.0.2",

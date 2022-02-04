@@ -14,7 +14,7 @@ export const Github = () => {
     grade0: "#ecd9fc"
   };
 
-  return <Row style={{justifyContent:"center", paddingBottom:"10px"}}>
+  return <Row style={{justifyContent:"center", paddingBottom:"10px"}} className="git-row">
     <h1 className="project-heading" style={{paddingBottom:"20px"}}>
       Days I <strong className="purple">Code</strong>
     </h1>

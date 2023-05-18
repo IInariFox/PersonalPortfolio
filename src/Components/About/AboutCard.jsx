@@ -9,7 +9,7 @@ export const AboutCard = () => {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             I am from<span className="purple"> San Diego, California.</span>
-            <br />I am a junior in college that is waiting to transfer to my dream school!
+            <br />I will be graduating in a few months!
             <br />
             <br />
             Apart from coding, some of my hobbies include:
@@ -28,7 +28,7 @@ export const AboutCard = () => {
               <ImPointRight /> Listening to Music - pop, classical, and R&B 🎵
             </li>
             <li className="about-activity">
-              <ImPointRight /> Relax with a session of playing my alto sax or piano 🎷
+              <ImPointRight /> Going on group rides and modifying my e-bike!
             </li>
           </ul>
         </blockquote>
